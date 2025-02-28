@@ -31,10 +31,12 @@ jobs:
           
       # Initialize Terraform
       - name: Terraform Init
+        working-directory: ./kpvms
         run: terraform init
 
       # Terraform Plan (This step checks what will change in your infrastructure)
       - name: Terraform Plan
+        working-directory: ./kpvms
         run: terraform plan
 
       
