@@ -1,3 +1,4 @@
+#Azure backend
 terraform {
   backend "azurerm" {
     resource_group_name  = "East US"
