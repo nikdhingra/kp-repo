@@ -66,29 +66,29 @@ variable "vm_config" {
       }
       vm_tags = { environment = "dev" }
     }
-    vm2 = { 
-      vm_name     = "vm2"
-      vm_size     = "Standard_D2s_v3"
-      install_ama = true  # AMA will be installed on this VM
-      image = { 
-        publisher = "MicrosoftWindowsServer"
-        offer     = "WindowsServer"
-        sku       = "2022-Datacenter"
-        version   = "latest"
-      }
-      vm_tags = { environment = "prod" }
-    }
-    vm3 = { 
-      vm_name     = "vm3"
-      vm_size     = "Standard_D2s_v3"
-      install_ama = true  # AMA will be installed on this VM
-      image = { 
-        publisher = "MicrosoftSQLServer"
-        offer     = "SQL2022-WS2022"
-        sku       = "Standard"
-        version   = "latest"
-      }
-      vm_tags = { environment = "test" }
-    }
+    # vm2 = { 
+    #   vm_name     = "vm2"
+    #   vm_size     = "Standard_D2s_v3"
+    #   install_ama = true  # AMA will be installed on this VM
+    #   image = { 
+    #     publisher = "MicrosoftWindowsServer"
+    #     offer     = "WindowsServer"
+    #     sku       = "2022-Datacenter"
+    #     version   = "latest"
+    #   }
+    #   vm_tags = { environment = "prod" }
+    # }
+    # vm3 = { 
+    #   vm_name     = "vm3"
+    #   vm_size     = "Standard_D2s_v3"
+    #   install_ama = true  # AMA will be installed on this VM
+    #   image = { 
+    #     publisher = "MicrosoftSQLServer"
+    #     offer     = "SQL2022-WS2022"
+    #     sku       = "Standard"
+    #     version   = "latest"
+    #   }
+    #   vm_tags = { environment = "test" }
+    # }
   }
 }
