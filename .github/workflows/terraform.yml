@@ -38,6 +38,11 @@ jobs:
       - name: Terraform Plan
         working-directory: ./kpvms
         run: terraform plan
+        
+      # Terraform Apply (This step checks what will change in your infrastructure)
+      - name: Terraform apply
+        working-directory: ./kpvms
+        run: terraform apply -auto-approve
 
       
 
