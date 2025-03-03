@@ -13,7 +13,7 @@ resource "azurerm_network_interface" "example" {
   }
 
 }
-
+# Create VM
 resource "azurerm_virtual_machine" "example" {
   for_each              = var.vm_config
   name                  = each.value.vm_name
