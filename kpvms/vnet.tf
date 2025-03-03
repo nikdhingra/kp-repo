@@ -3,6 +3,7 @@ resource "azurerm_resource_group" "example" {
   location = var.location
 }
 
+# Create VNET
 resource "azurerm_virtual_network" "example"{
   name                = var.vnet_name
   location            = var.location
