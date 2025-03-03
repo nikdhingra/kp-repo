@@ -56,7 +56,7 @@ variable "vm_config" {
   default = {
     vm1 = { 
       vm_name     = "vm1"
-      vm_size     = "Standard_D2s_v3"
+      vm_size     = "Standard_DS1_v2"
       install_ama = false  # No AMA on this VM
       image = { 
         publisher = "MicrosoftWindowsServer"

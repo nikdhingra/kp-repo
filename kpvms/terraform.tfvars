@@ -1,5 +1,5 @@
 resource_group_name   = "rg-kp-demo"
-  location              = "East US"
+  location              = "westeurope"
   vnet_name             = "kptest"
   vnet_address_space    = ["10.0.0.0/16"]
   subnet_name           = "mySubnet"
