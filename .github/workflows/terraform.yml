@@ -10,7 +10,7 @@ on:
 
 jobs:
   terraform:
-    runs-on: self-hosted
+    runs-on: selfhost-ubuntu
 
     steps:
       # Checkout the code from the repository
