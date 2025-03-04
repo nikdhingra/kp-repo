@@ -1,3 +1,3 @@
 [submodule "kp-repo"]
     path = kp-repo
-    url = https://github.com/nikdhingra/kp-repo.git kpvms
+    url = https://github.com/nikdhingra/kp-repo.git
