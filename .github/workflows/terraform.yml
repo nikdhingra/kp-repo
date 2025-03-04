@@ -16,6 +16,8 @@ jobs:
       # Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          submodules: false
 
       # Set up Terraform
       - name: Set up Terraform
