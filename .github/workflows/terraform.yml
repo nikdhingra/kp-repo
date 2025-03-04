@@ -40,7 +40,7 @@ jobs:
         run: terraform plan
         
       # Terraform Apply (This step checks what will change in your infrastructure)
-      - name: Terraform apply
+      - name: Terraform Apply
         working-directory: ./kpvms
         run: terraform apply -auto-approve
         
