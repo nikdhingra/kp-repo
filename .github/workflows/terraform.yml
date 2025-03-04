@@ -1,4 +1,4 @@
-royname: Terraform Deployment
+name: Terraform Deployment
 
 on:
   push:
