@@ -45,7 +45,7 @@ jobs:
         run: terraform apply -auto-approve
         
       # Terraform Destroy (This step checks what will change in your infrastructure)
-      - name: Terraform Destroy
+      - name: Terraform destroy
         working-directory: ./kpvms
         run: terraform destroy -auto-approve
 
