@@ -1,0 +1,54 @@
+name: Terraform Deployment
+
+on:
+  push:
+    branches:
+      - main # Run the workflow on push to the main branch
+  pull_request:
+    branches:
+      - main # Run the workflow when a pull request is made to the main branch
+
+jobs:
+  terraform:
+    runs-on: self-hosted
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Set up Terraform
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: '1.0.0'  # You can specify the required Terraform version
+
+      # Set up Azure credentials for Terraform (optional, if using Azure)
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          
+      # Initialize Terraform
+      - name: Terraform Init
+        working-directory: ./kpvms
+        run: terraform init
+
+      # Terraform Plan (This step checks what will change in your infrastructure)
+      - name: Terraform Plan
+        working-directory: ./kpvms
+        run: terraform plan
+        
+      # Terraform Apply (This step checks what will change in your infrastructure)
+      - name: Terraform Apply
+        working-directory: ./kpvms
+        run: terraform apply -auto-approve
+        
+      # Terraform Destroy (This step checks what will change in your infrastructure)
+      - name: Terraform Destroy
+        working-directory: ./kpvms
+        run: terraform destroy -auto-approve
+
+      
+
+        
